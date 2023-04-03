@@ -1,15 +1,14 @@
-
-import { TextField } from '@mui/material';
 import './App.css';
-import Header from './components/header/header';
+import GamePage from './components/GamePage/GamePage';
+import { StartPage } from './components/StartPage/StartPage';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <TextField id="standard-basic" label="Team 1 Name" variant="standard" />
-      <TextField id="standard-basic" label="Team 2 Name" variant="standard" />
-    </div>
+    <><div className="App">
+        {/* <StartPage/> */}
+        <GamePage/>
+      </div>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 .App {
   height: 100vh;
   background-color: azure;
+  box-sizing: border-box;
   padding: 16px;
 }

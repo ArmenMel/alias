@@ -1,0 +1,7 @@
+.settings{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
