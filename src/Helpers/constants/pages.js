@@ -6,13 +6,13 @@ import { StartPage } from "../../components/StartPage/StartPage"
 export const STAGES = {
     start: 'start',
     game: 'game',
-    calculating: 'calculating',
+    transition: 'transition',
     results: 'results',
 }
 export const PAGE_BY_STAGE = {
     [STAGES.start]: StartPage,
     [STAGES.game]: GamePage,
-    [STAGES.calculating]: CalculatingPage,
+    [STAGES.transition]: CalculatingPage,
     [STAGES.results]: ResultsPage,
 }
 
