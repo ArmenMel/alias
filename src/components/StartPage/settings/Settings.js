@@ -47,7 +47,7 @@ function Settings(){
                 value={userNames.team2}
                 onChange={handleUserNameChange}
             />
-            <Button 
+            <Button
                 variant="contained"
                 onClick={handleStartGameClick}
             >Lets Play</Button>

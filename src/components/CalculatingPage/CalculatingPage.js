@@ -1,14 +1,27 @@
-import { useSelector } from "react-redux"
+import { Button } from "@mui/material"
+import { useDispatch, useSelector } from "react-redux"
+import { STAGES } from "../../Helpers/constants/pages"
+import { setStage } from "../../store/actionCreators"
+import styles from './CalculatingPage.module.css'
 
 export const CalculatingPage = () => {
     
+    const dispatch = useDispatch()
     const state = useSelector(state => state)
+    const HandleNextRoundClick = () => {
+        const action = setStage(STAGES.game)
+        dispatch(action)
+    }
     
     return(
-        <>
-        <p>{state.team1.name}: {state.team1.correctWords.length}</p>
-        <p>{state.team2.name}: {state.team2.correctWords.length}</p>
-        <p>Next turn: {state.turn === 'team1' ? 'team2' : 'team1'}</p>
-        </>
+        <div className={styles.transitionPage}>
+            <p><b>{state.team1.name}</b>: {state.team1.correctWords.length} Points</p>
+            <p><b>{state.team2.name}</b>: {state.team2.correctWords.length} Points</p>
+            <p>Next turn: <b>{state.turn}</b></p>
+            <Button
+                variant="contained"
+                onClick={HandleNextRoundClick}
+            >Play</Button>
+        </div>
     )
 }
